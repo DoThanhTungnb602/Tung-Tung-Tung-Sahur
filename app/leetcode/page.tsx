@@ -4,7 +4,7 @@ import BackButton from "../components/BackButton";
 
 export default function LeetCodePage() {
     return (
-        <div className="paper">
+        <div>
             <h1 className="text-3xl font-bold mb-6 text-center">LeetCode Tracker</h1>
 
             <table className="table-hover table-striped">

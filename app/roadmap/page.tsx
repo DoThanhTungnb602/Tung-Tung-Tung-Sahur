@@ -125,7 +125,7 @@ export default function RoadmapPage() {
     const nodeTypes = useMemo(() => ({ sketchy: SketchyNode }), []);
 
     return (
-        <div style={{ height: "80vh", border: "2px solid #000" }} className="bg-cream">
+        <div style={{ height: "80vh", border: "2px solid #000" }}>
             <ReactFlow
                 nodes={nodes}
                 edges={edges}

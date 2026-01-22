@@ -81,7 +81,7 @@ export default function DesignBoard() {
     };
 
     return (
-        <div style={{ height: "80vh", border: "2px solid #000", position: 'relative' }} className="bg-cream">
+        <div style={{ height: "80vh", border: "2px solid #000", position: 'relative' }}>
             <div className="absolute top-4 left-4 z-10 bg-white p-2 border border-black shadow-md rounded">
                 <p className="font-bold mb-2">Toolbox</p>
                 <button className="btn-small bg-lavender block w-full mb-1" onClick={() => addNode("Service", "#EAE4E9")}>+ Service</button>

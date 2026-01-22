@@ -5,38 +5,7 @@ import { RoughNotation } from "react-rough-notation";
 import clsx from "clsx";
 import PaperButton from "./components/PaperButton";
 
-const stickyNotes = [
-  {
-    title: "Maps",
-    href: "/roadmap",
-    color: "#EAE4E9", // lavender
-    rotate: "-rotate-2",
-  },
-  {
-    title: "Quiz",
-    href: "/quiz",
-    color: "#BEE1E6", // sky
-    rotate: "rotate-1",
-  },
-  {
-    title: "Design",
-    href: "/design",
-    color: "#FFF1E6", // peach
-    rotate: "-rotate-1",
-  },
-  {
-    title: "LeetCode",
-    href: "/leetcode",
-    color: "#E2ECE9", // mint
-    rotate: "rotate-2",
-  },
-  {
-    title: "Docs",
-    href: "/topics",
-    color: "#FAD2E1", // pink
-    rotate: "rotate-3",
-  }
-];
+import { STICKY_NOTES as stickyNotes } from "./data/colors";
 
 export default function Home() {
   return (
@@ -55,14 +24,14 @@ export default function Home() {
       </h1>
 
       {/* The Wall Grid */}
-      <div className="flex flex-wrap justify-center gap-12 max-w-4xl z-10 px-4">
+      <div className="flex flex-wrap justify-center gap-12 max-w-6xl z-10 px-4 pt-10">
         {stickyNotes.map((note) => (
           <PaperButton
             key={note.title}
             href={note.href}
             as="div"
             className={clsx(
-              "w-64 h-32 flex flex-col justify-center items-center text-center",
+              "w-80 h-48 flex flex-col justify-center items-center text-center",
               note.rotate
             )}
             style={{

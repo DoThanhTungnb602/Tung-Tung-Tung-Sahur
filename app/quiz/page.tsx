@@ -9,7 +9,7 @@ export default function QuizPage() {
     const [selectedQuestion, setSelectedQuestion] = useState<QuizQuestion | null>(null);
 
     return (
-        <div className="paper">
+        <div>
             <div className="flex justify-between items-center mb-6">
                 <BackButton />
                 <h1 className="text-3xl font-bold text-center flex-grow">C++ Quiz Challenge</h1>
@@ -47,22 +47,42 @@ export default function QuizPage() {
                     ></div>
 
                     {/* Modal Content */}
-                    <div className="modal show" style={{ display: "block", position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: '500px', maxWidth: '90%' }}>
-                        <div className="modal-title flex justify-between items-center">
-                            <h3 className="text-xl font-bold m-0">Answer</h3>
-                            <span className="close cursor-pointer text-2xl" onClick={() => setSelectedQuestion(null)}>&times;</span>
-                        </div>
-                        <div className="modal-body">
-                            <p className="font-bold mb-2">Question: {selectedQuestion.question}</p>
-
-                            <div className="alert alert-success bg-mint mb-4">
-                                Correct Answer: <strong>{selectedQuestion.answer}</strong>
+                    <div
+                        className="modal show"
+                        style={{
+                            display: "block",
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            width: '500px',
+                            maxWidth: '90%',
+                            padding: 0,
+                            border: 'none',
+                            background: 'transparent'
+                        }}
+                    >
+                        <div className="card" style={{ margin: 0 }}>
+                            <div className="card-header flex justify-between items-center bg-white border-b-2 border-black p-4">
+                                <h3 className="text-xl font-bold m-0">Answer</h3>
+                                <span
+                                    className="close cursor-pointer text-2xl hover:text-gray-600"
+                                    onClick={() => setSelectedQuestion(null)}
+                                >&times;</span>
                             </div>
+                            <div className="card-body p-4 bg-white">
+                                <p className="font-bold mb-2">Question: {selectedQuestion.question}</p>
 
-                            <p><strong>Explanation:</strong> {selectedQuestion.explanation}</p>
-                        </div>
-                        <div className="modal-footer text-right">
-                            <button className="btn-primary" onClick={() => setSelectedQuestion(null)}>Close</button>
+                                <div className="alert alert-success bg-mint mb-4 border-2 border-black dashed">
+                                    Correct Answer: <strong>{selectedQuestion.answer}</strong>
+                                </div>
+
+                                <p><strong>Explanation:</strong> {selectedQuestion.explanation}</p>
+
+                                <div className="text-right mt-4">
+                                    <button className="btn-primary paper-btn" onClick={() => setSelectedQuestion(null)}>Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

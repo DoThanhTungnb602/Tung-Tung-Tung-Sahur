@@ -20,7 +20,7 @@ export default function PaperButton({
     ...props
 }: PaperButtonProps) {
     const baseClasses =
-        "transition-all duration-200 cursor-pointer border-2 border-[#41403e] shadow-[4px_4px_0px_0px_#41403e] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none selection:bg-none font-[family-name:var(--font-patrick-hand)]";
+        "transition-all duration-200 cursor-pointer border-2 border-[#41403e] shadow-[4px_4px_0px_0px_#41403e] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none selection:bg-none font-[family-name:var(--font-patrick-hand)] !no-underline hover:!no-underline after:!content-none before:!content-none";
 
     const mergedClasses = twMerge(baseClasses, className);
 

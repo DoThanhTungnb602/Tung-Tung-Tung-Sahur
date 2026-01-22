@@ -23,7 +23,7 @@ function TopicList({ nodes }: { nodes: RoadmapNode[] }) {
 
 export default function TopicsIndexPage() {
     return (
-        <div className="paper">
+        <div>
             <div className="mb-4"><BackButton /></div>
             <h1 className="text-3xl font-bold mb-6">All Topics</h1>
             <TopicList nodes={CppRoadmap} />
