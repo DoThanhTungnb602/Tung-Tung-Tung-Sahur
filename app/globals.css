@@ -1,26 +1,22 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind utilities;
 
+
+
+/* Custom Color Palette */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-lavender: #EAE4E9;
+  --color-peach: #FFF1E6;
+  --color-rose: #FDE2E4;
+  --color-pink: #FAD2E1;
+  --color-mint: #E2ECE9;
+  --color-sky: #BEE1E6;
+  --color-cream: #F0EFEB;
+  --color-periwinkle: #DFE7FD;
+  --color-blue: #CDDAFD;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  min-height: 100vh;
 }
